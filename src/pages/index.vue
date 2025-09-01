@@ -6,8 +6,8 @@
     <div
       class="d-flex flex-column align-center justify-center rounded-xl"
       :style="{
-        width: '500px',
-        height: '460px',
+        width: $vuetify.display.mobile ? '360px' : '500px',
+        height: $vuetify.display.mobile ? '620px' : '460px',
         backgroundColor: theme.current.value.colors.backgroundSec,
         'box-shadow': theme.current.value.colors.boxShadow,
       }"

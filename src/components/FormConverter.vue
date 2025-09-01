@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-form ref="form" lazy-validation style="width: 400px">
+    <v-form ref="form" lazy-validation :style="{ width: $vuetify.display.mobile ? '320px' : '400px' }">
       <v-row>
         <h1
           class="mx-auto"
@@ -63,6 +63,7 @@
             v-model="toCurrency"
             bg-color="background"
             color="text_primary"
+            :hide-details="$vuetify.display.mobile"
             item-title="text"
             item-value="value"
             :items="currencies"
