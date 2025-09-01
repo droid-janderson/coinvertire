@@ -37,7 +37,7 @@ Após concluir a instalação, seu ambiente estará pronto para rodar o projeto 
 
 Esta seção explica como iniciar o servidor de desenvolvimento com hot-reload e como gerar a build de produção do projeto.
 
-Caso deseje rodar o projeto localmente na sua máquina, foi deixado um arquivo `.env.example` na raiz do projeto. Faça uma cópia desse arquivo e renomeie para `.env`, depois adicione sua chave de API da [Currency Layer](https://currencylayer.com/) no campo `VITE_API_KEY`.
+Caso deseje rodar o projeto localmente na sua máquina, foi deixado um arquivo `.env.example` na raiz do projeto. Faça uma cópia desse arquivo e renomeie para `.env`, depois adicione sua chave de API da [Currency Layer](https://currencylayer.com/) no campo `VITE_API_KEY` e adicione a url da API no campo `VITE_URL_API`.
 
 ### 🔥 Iniciando o servidor de desenvolvimento
 
