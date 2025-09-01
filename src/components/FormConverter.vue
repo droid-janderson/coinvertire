@@ -143,7 +143,7 @@
 
   const debouncedAPI = useDebounce(convertAmount, 800)
 
-  watch([amount], () => {
+  watch([amount, fromCurrency, toCurrency], () => {
     debouncedAPI()
   })
 </script>
