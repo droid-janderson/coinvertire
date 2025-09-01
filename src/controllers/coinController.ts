@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export default class Coin {
   apiKey = import.meta.env.VITE_API_KEY
-  url = `https://api.currencylayer.com/`
+  url = import.meta.env.VITE_URL_API
 
   instance = axios.create({
     baseURL: this.url,
