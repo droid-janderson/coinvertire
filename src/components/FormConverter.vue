@@ -77,7 +77,7 @@
           <v-card color="background">
             <v-card-text>
               <h3 class="font-weight-regular">Valor convertido</h3>
-              <h2 class="font-weight-regular">$ {{ amountConvert.result.toFixed(2) }}</h2>
+              <h2 class="font-weight-regular">$ {{ amountConvert.toFixed(2) ?? 0 }}</h2>
             </v-card-text>
           </v-card>
         </v-col>
@@ -98,16 +98,16 @@
 
   // Variables
   const amount = ref(0)
-  const amountConvert = ref<object | null>({ result: 0 })
+  const amountConvert = ref<number>(0)
   const fromCurrency = ref('USD')
   const toCurrency = ref('BRL')
 
   const currencies = ref<any[]>([])
 
   // mounted
-  // onMounted(async () => {
-  //   await getCoins()
-  // })
+  onMounted(async () => {
+    await getCoins()
+  })
 
   // Methods
   function useDebounce (fn: Function, delay = 500) {
@@ -130,7 +130,7 @@
   async function convertAmount () {
     const response = await coinController.converterAmount(fromCurrency.value, toCurrency.value, amount.value)
 
-    amountConvert.value = response.data
+    amountConvert.value = response.data.result
   }
 
   async function changeCoins () {
