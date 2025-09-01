@@ -8,3 +8,20 @@
 // @use 'vuetify/settings' with (
 //   $color-pack: false
 // );
+
+/* Remove margens e paddings globais */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;   /* garante altura total */
+  width: 100%;    /* largura total */
+  overflow: hidden; /* remove scroll */
+}
+
+/* O app Vue vai ocupar sempre a tela inteira */
+#app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
